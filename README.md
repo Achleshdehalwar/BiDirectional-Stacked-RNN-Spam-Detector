@@ -8,7 +8,7 @@
 
 > **A robust End-to-End NLP pipeline engineering a custom Stacked Bi-Directional RNN to detect SMS spam with high precision.**
 
-🔗 **[Live Demo on Hugging Face](https://huggingface.co/spaces/YOUR_USERNAME/YOUR_SPACE_NAME)**
+🔗 **[Live Demo on Hugging Face](https://huggingface.co/spaces/achleszh/BiDirectional-Stacked-RNN-Spam-Detector)**
 
 ---
 
