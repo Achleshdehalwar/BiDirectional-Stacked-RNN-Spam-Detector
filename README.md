@@ -49,8 +49,50 @@ The core model is a custom PyTorch module designed for stability and performance
 ## 🚀 Installation & Usage
 
 ### 1. Clone the Repository
-```bash
+`bash
 git clone [https://github.com/yourusername/rnn-spam-detector.git](https://github.com/yourusername/rnn-spam-detector.git)
-cd rnn-spam-detector
+cd rnn-spam-detector`
 
-2. Install Dependencies
+### 2. Install Dependencies
+  `pip install -r req.txt`
+
+### 3. Train the Model (Local)
+Run the training script to fetch data, run Optuna optimization, and generate the model artifacts (.pth, .json).
+`python train_and_save.py`
+Output: Generates spam_rnn.pth, vocab.json, and config.json.
+
+### 4. Run the App
+Launch the Streamlit interface locally.
+`streamlit run app.py`
+
+### 📂 Project Structure
+├── app.py                 # The Streamlit application (Inference Engine)
+├── train_and_save.py      # Training pipeline + Optuna Optimization
+├── requirements.txt       # Project dependencies
+├── spam_rnn.pth           # Saved PyTorch Model Weights (Generated)
+├── vocab.json             # Learned Vocabulary Dictionary (Generated)
+├── config.json            # Model Architecture Config (Generated)
+└── README.md              # Documentation
+
+### 📊 Optimization (Optuna)
+Instead of guessing hyperparameters, this project integrates Optuna to mathematically find the best configuration.
+Search Space:
+Embedding Dimension: [32 - 128]
+Hidden Dimension: [32 - 128]
+Dropout: [0.1 - 0.5]
+Learning Rate: [1e-4 - 1e-2] (Log Scale)
+The training script automatically prunes unpromising trials to save compute resources.
+
+### 🤝 Contributing
+1. Contributions, issues, and feature requests are welcome!
+2. Fork the Project
+3. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+4. Commit your Changes (git commit -m 'Add some AmazingFeature')
+5. Push to the Branch (git push origin feature/AmazingFeature)
+6. Open a Pull Request
+
+### 📝 License
+Distributed under the MIT License. See LICENSE for more information.
+<p align="center">
+Built with ❤️ using PyTorch & Streamlit
+</p>
